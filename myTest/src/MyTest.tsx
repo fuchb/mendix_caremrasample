@@ -39,6 +39,7 @@ export class MyTest extends Component {
         return (
             <View>
                 <RNCamera
+				    style={{width: 600,height: 555}}
                     /* ref={ref => {
                         camera = ref;
                     }}*/
@@ -48,7 +49,7 @@ export class MyTest extends Component {
                 >
                    <View>
                         <View /*style={styles.rectangle}*//>
-                        <Text>将二维码放入框内，即可自动扫描</Text>
+                        <Text></Text>
                     </View> 
                     </RNCamera>
             </View>
