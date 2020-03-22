@@ -4,7 +4,7 @@ import {RNCamera} from 'react-native-camera';
 
 export class MyTest extends Component {
 
-    constructor(props) {
+   /* constructor(props) {
         super(props);
         this.state = {
             moveAnim: new Animated.Value(0)
@@ -33,23 +33,23 @@ export class MyTest extends Component {
             navigate('Sale', {
                 url: data
             })
-    };
+    };*/
 
     render():ReactNode {
         return (
             <View>
                 <RNCamera
-                    ref={ref => {
+                    /* ref={ref => {
                         camera = ref;
-                    }}
+                    }}*/
                     type={RNCamera.Constants.Type.back}
-                    flashMode={RNCamera.Constants.FlashMode.on}
-                    onBarCodeRead={onBarCodeRead}
+                    /*flashMode={RNCamera.Constants.FlashMode.on}
+                    onBarCodeRead={onBarCodeRead}*/
                 >
-                   <!-- <View>
-                        <View style={styles.rectangle}/>
+                   <View>
+                        <View /*style={styles.rectangle}*//>
                         <Text>将二维码放入框内，即可自动扫描</Text>
-                    </View> -->
+                    </View> 
                     </RNCamera>
             </View>
         );
