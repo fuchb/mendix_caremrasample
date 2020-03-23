@@ -1,5 +1,5 @@
 import { Component, createElement } from "react";
-import { Platform, Text, View, Image, CameraRoll } from "react-native";
+import { Platform, Text, View, CameraRoll } from "react-native";
 
 import { styles } from "../ui/styles";
 import {RNCamera} from 'react-native-camera';
@@ -31,10 +31,6 @@ export class CameraSample extends Component {
                     type={RNCamera.Constants.Type.back}>
                         <View>
                             <Text style={styles.button} onPress={this.takePicture.bind(this)}>[take photo]</Text>
-                             <Image style={{width: 100, height: 100, marginBottom: 20}}
-                              ref={ref => {this.myImage = ref;}} 
-                              source={{uri: ""}}>
-                             </Image>
                         </View> 
                     </RNCamera>
             </View>
@@ -45,17 +41,7 @@ export class CameraSample extends Component {
     if (this.camera) {
       const options = { quality: 0.5, base64: true };
       const data = await this.camera.takePictureAsync(options);
-      
       CameraRoll.saveToCameraRoll(data.uri);
-      /*イメージパス*/
-      this.setState({
-          imagePath: data.uri,
-      });
- 
-      /*イメージサイズ取得*/
-      Image.getSize(data.uri,(width,height) =>{
-          console.log(width,height);
-      });
     }
   }
 }
