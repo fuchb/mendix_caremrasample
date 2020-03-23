@@ -1,7 +1,7 @@
 import { StyleSheet } from "react-native";
 
-export const styles: any = StyleSheet.create({
-    flex: {
+export const styles = StyleSheet.create({
+    "flex": {
         flexDirection: "row"
     },
 	container: {
@@ -31,7 +31,7 @@ export const styles: any = StyleSheet.create({
         borderColor: '#00FF00',
         backgroundColor: 'transparent'
     },
-    badge: {
+    "badge": {
         borderRadius: 30,
         paddingLeft: 10,
         paddingRight: 10,
@@ -39,12 +39,7 @@ export const styles: any = StyleSheet.create({
         paddingBottom: 5,
         backgroundColor: "#D9534F"
     },
-    preview: {
-        flex: 1,
-        justifyContent: 'flex-end',
-        alignItems: 'center'
-    },
-    label: {
+    "label": {
         textAlign: "center",
         fontSize: 15,
         fontWeight: "bold",

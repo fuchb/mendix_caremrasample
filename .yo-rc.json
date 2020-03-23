@@ -1,11 +1,11 @@
 {
   "@mendix/generator-widget": {
     "promptValues": {
-      "organization": "Mendix",
-      "copyright": "2020 Mendix Technology BV",
+      "organization": "com.mendix.widget.native",
+      "copyright": "Mendix 2020",
       "license": "Apache-2.0",
-      "author": "John",
-      "programmingLanguage": "typescript",
+      "author": "Fuchb",
+      "programmingLanguage": "javascript",
       "platform": "native",
       "boilerplate": "full"
     }

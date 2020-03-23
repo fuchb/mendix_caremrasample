@@ -1,4 +1,4 @@
-## MyTest
+## CameraTest
 [My widget description]
 
 ## Features
