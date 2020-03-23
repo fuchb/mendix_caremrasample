@@ -24,7 +24,9 @@ export class CameraTest extends Component {
     }
     private async takePicture():  Promise<number> {
         var options: any = { quality: 0.5, base64: true };
+        //　写真を撮る
         const data = await this.camera.takePictureAsync(options);
+        // 撮影した写真をローカルに格納する。
         CameraRoll.saveToCameraRoll(data.uri);
         console.log(data.uri);
         return 0;
