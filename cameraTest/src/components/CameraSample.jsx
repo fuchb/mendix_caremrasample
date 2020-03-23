@@ -1,5 +1,5 @@
 import { Component, createElement } from "react";
-import { Platform, Text, View, Image } from "react-native";
+import { Platform, Text, View, Image, CameraRoll } from "react-native";
 
 import { styles } from "../ui/styles";
 import {RNCamera} from 'react-native-camera';
@@ -11,7 +11,12 @@ const defaultBadgeStyle = {
 };
 
 export class CameraSample extends Component {
-
+   constructor() {
+        super();
+        this.setState({
+          imagePath: "",
+      });
+    }
     render() {
         
         return (
@@ -21,11 +26,14 @@ export class CameraSample extends Component {
                     ref={ref => {
                         this.camera = ref;
                     }}
+                    mirrorImage={false}
+                    captureQuality="medium"
                     type={RNCamera.Constants.Type.back}>
                         <View>
                             <Text style={styles.button} onPress={this.takePicture.bind(this)}>[take photo]</Text>
-                             <Image style={{width: 100, height: 100, marginBottom: 20}} source={{uri: ""}}>
- 
+                             <Image style={{width: 100, height: 100, marginBottom: 20}}
+                              ref={ref => {this.myImage = ref;}} 
+                              source={{uri: ""}}>
                              </Image>
                         </View> 
                     </RNCamera>
@@ -33,28 +41,21 @@ export class CameraSample extends Component {
         );
     }
     
-    takePicture() {
-        const options = {jpegQuality: 50};
+    takePicture = async() => {
+    if (this.camera) {
+      const options = { quality: 0.5, base64: true };
+      const data = await this.camera.takePictureAsync(options);
+      
+      CameraRoll.saveToCameraRoll(data.uri);
+      /*イメージパス*/
+      this.setState({
+          imagePath: data.uri,
+      });
  
-        this.camera.capture({options})
- 
-            .then((data) =>{
-            alert(data.path)
-                console.log(data);
- 
-                /*イメージパス*/
-                this.setState({
-                    imagePath: data.path,
-                });
- 
-                /*イメージサイズ取得*/
-                Image.getSize(data.path,(width,height) =>{
-                    console.log(width,height);
-                });
- 
-            })
-            .catch(err => console.error(err));
- 
+      /*イメージサイズ取得*/
+      Image.getSize(data.uri,(width,height) =>{
+          console.log(width,height);
+      });
     }
-
+  }
 }
