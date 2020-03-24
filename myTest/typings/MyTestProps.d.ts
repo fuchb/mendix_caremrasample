@@ -11,6 +11,6 @@ interface CommonProps<Style> {
 }
 
 export interface MyTestProps<Style> extends CommonProps<Style> {
-    valueAttribute?: EditableValue<string | BigJs.Big>;
+    valueAttribute: EditableValue<string>;
     onClickAction?: ActionValue;
 }

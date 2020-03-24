@@ -26,10 +26,17 @@ export const styles: any = StyleSheet.create({
   },
 	rectangle: {
         height: 400,
-        width: 400,
+        width: 380,
         borderWidth: 1,
         borderColor: '#00FF00',
         backgroundColor: 'transparent'
+    },
+    rectangleText: {
+        flex: 0,
+        color: '#fff',
+        fontSize: 40,
+        marginTop: 10,
+        marginLeft: 100
     },
     badge: {
         borderRadius: 30,
