@@ -3,7 +3,6 @@
  * WARNING: All changes made to this file will be overwritten
  * @author Mendix Widgets Team
  */
-import { ActionValue, EditableValue } from "mendix";
 
 interface CommonProps<Style> {
     name: string;
@@ -11,6 +10,5 @@ interface CommonProps<Style> {
 }
 
 export interface MyTestProps<Style> extends CommonProps<Style> {
-    valueAttribute: EditableValue<string>;
-    onClickAction?: ActionValue;
+
 }

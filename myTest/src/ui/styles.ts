@@ -1,60 +1,43 @@
 import { StyleSheet } from "react-native";
 
 export const styles: any = StyleSheet.create({
-    flex: {
-        flexDirection: "row"
-    },
-	container: {
+    container: {
         flex: 1,
-        flexDirection: 'row',
+        backgroundColor: 'black',
     },
-	capture: {
-        flex: 0,
-        backgroundColor: '#fff',
-        borderRadius: 5,
-        color: '#000',
-        padding: 10,
-        margin: 40
-    },
-	button: {
-    flex: 0,
-    backgroundColor: '#fff',
-    borderRadius: 5,
-    color: '#000',
-    padding: 10,
-    margin: 40,
-  },
-	rectangle: {
-        height: 400,
-        width: 380,
-        borderWidth: 1,
-        borderColor: '#00FF00',
-        backgroundColor: 'transparent'
-    },
-    rectangleText: {
-        flex: 0,
-        color: '#fff',
-        fontSize: 40,
-        marginTop: 10,
-        marginLeft: 100
-    },
-    badge: {
-        borderRadius: 30,
-        paddingLeft: 10,
-        paddingRight: 10,
-        paddingTop: 5,
-        paddingBottom: 5,
-        backgroundColor: "#D9534F"
-    },
-    preview: {
+    camera: {
         flex: 1,
         justifyContent: 'flex-end',
         alignItems: 'center'
     },
-    label: {
-        textAlign: "center",
-        fontSize: 15,
-        fontWeight: "bold",
-        color: "#FFFFFF"
-    }
+    bottom: {
+        position: 'absolute',
+        height: 84,
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        backgroundColor: 'transparent',
+    },
+    takeImage: {
+        width: 64,
+        height: 64,
+        margin: 10,
+    },
+    switchCamera: {
+        color: '#fff',
+        fontSize: 20,
+    },
+    myButton:{
+        padding: 5,
+        height: 60,
+        width: 60,  //The Width must be the same as the height
+        borderRadius:400, //Then Make the Border Radius twice the size of width or Height   
+        backgroundColor:'rgb(195, 125, 198)',
+        position: 'absolute',
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center'
+      }
+    
+
 });
