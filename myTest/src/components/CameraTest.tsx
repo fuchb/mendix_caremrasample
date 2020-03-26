@@ -1,5 +1,5 @@
 import { Component, ReactNode, createElement } from "react";
-import { View, CameraRoll, TouchableOpacity, Text, Dimensions } from "react-native";
+import { Platform, View, CameraRoll, TouchableOpacity, Text, Dimensions, TouchableHighlight } from "react-native";
 import {RNCamera} from 'react-native-camera';
 import { styles } from "../ui/styles";
 
@@ -27,19 +27,37 @@ export class CameraTest extends Component<IProps, IState> {
         );
     };
 
-    _renderTakePhotoButton = () => {
+    _renderCenterView = () => {
         var {width, height} = Dimensions.get('window');
         const style = {
             bottom: (height - 210) * -1,
             left: width / 2 - 30
         }
         return (
-            <TouchableOpacity
+            <View style={style}></View>
+        );
+    };
+
+    _renderTakePhotoButton = () => {
+        var {width, height} = Dimensions.get('window');
+        const style = {
+            bottom: (height - 210) * -1,
+            left: width / 2 - 30
+        }
+        const isAndroid = Platform.OS === "android";
+        return (
+            isAndroid ? (
+                <TouchableHighlight
+                    onPress={this._clickTakePicture.bind(this)}
+                    style={[styles.myButton]}>
+                    <Text/>
+                </TouchableHighlight>
+            ) : (
+            <TouchableHighlight
                 onPress={this._clickTakePicture.bind(this)}
-                style={[styles.myButton, style]}
-            >
+                style={[styles.myButton, style]}>
                 <Text/>
-            </TouchableOpacity>
+            </TouchableHighlight>)
         );
     };
 
@@ -51,10 +69,9 @@ export class CameraTest extends Component<IProps, IState> {
         }
         return (
             <TouchableOpacity
-                onPress={this._clickSwitchCamera.bind(this)}
                 style={ style }
             >
-                <Text style={styles.switchCamera}>カメラ切り替え</Text>
+                <Text style={styles.switchCamera} onPress={this._clickSwitchCamera.bind(this)}>カメラ切り替え</Text>
             </TouchableOpacity>
         );
     };
@@ -79,7 +96,6 @@ export class CameraTest extends Component<IProps, IState> {
     };
     
     private async _clickTakePicture():  Promise<number> {
-        
         var options: any = { quality: 0.5, base64: true };
         //　写真を撮る
         const data = await this.camera.takePictureAsync(options);
