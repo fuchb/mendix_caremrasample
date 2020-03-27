@@ -71,7 +71,7 @@ export class CameraTest extends Component<IProps, IState> {
             <TouchableOpacity
                 style={ style }
             >
-                <Text style={styles.switchCamera} onPress={this._clickSwitchCamera.bind(this)}>カメラ切り替え</Text>
+                <Text style={styles.switchCamera} onPress={this._clickSwitchCamera.bind(this)}></Text>
             </TouchableOpacity>
         );
     };
