@@ -1,0 +1,12 @@
+C:\Program Files\Mendix\8.7.0.1476\modeler\tools\node\node.exe "C:\Program Files\Mendix\8.7.0.1476\modeler\tools\node\node_modules\react-native\local-cli\cli.js" start --port "8083" --config "E:\workspace\src\mendix\webTest\cameraTest\dist\MxTestProject\deployment\native\metro.config.json" --reactNativePath "C:\Program Files\Mendix\8.7.0.1476\modeler\tools\node\node_modules\react-native" 
+
+笏娯楳笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏・笏・                                                                             笏・笏・ Running Metro Bundler on port 8083.                                         笏・笏・                                                                             笏・笏・ Keep Metro running while developing on any JS projects. Feel free to        笏・笏・ close this tab and run your own Metro instance if you prefer.               笏・笏・                                                                             笏・笏・ https://github.com/facebook/react-native                                    笏・笏・                                                                             笏・笏披楳笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏・
+Looking for JS files in
+   E:\workspace\src\mendix\webTest\cameraTest\dist\MxTestProject\deployment\native
+   E:/workspace/src/mendix/webTest/cameraTest/dist/MxTestProject/theme
+   E:/workspace/src/mendix/webTest/cameraTest/dist/MxTestProject/javascriptsource
+   C:/Program Files/Mendix/8.7.0.1476/modeler/tools/node/node_modules 
+
+Loading dependency graph, done.
+
+

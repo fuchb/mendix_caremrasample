@@ -16,9 +16,14 @@ export class BadgeSample extends Component {
           
         return (
             <div>
-                <Camera
-                onTakePhoto = { (dataUri) => { handleTakePhoto(dataUri); } }/>
-            <img id={"myImage"}/>
+                
+                <div>
+                    <Camera
+                    onTakePhoto = { (dataUri) => { handleTakePhoto(dataUri); } }/>
+                </div>
+                <div>
+                    <img id={"myImage"}/>
+                </div>
         </div>
         );
     }
