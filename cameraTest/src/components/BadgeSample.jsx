@@ -21,8 +21,8 @@ export class BadgeSample extends Component {
                     <Camera
                     onTakePhoto = { (dataUri) => { handleTakePhoto(dataUri); } }/>
                 </div>
-                <div>
-                    <img id={"myImage"}/>
+                <div align={"center"}>
+                    <img id={"myImage"} />
                 </div>
         </div>
         );
