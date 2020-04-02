@@ -44,14 +44,14 @@ export class CameraTest extends Component<IProps, IState> {
             bottom: (height - 210) * -1,
             left: width / 2 - 30
         }
+        
         const isAndroid = Platform.OS === "android";
         return (
             isAndroid ? (
-                <TouchableHighlight
-                    onPress={this._clickTakePicture.bind(this)}
-                    style={[styles.myButton]}>
-                    <Text/>
-                </TouchableHighlight>
+                <TouchableOpacity
+                    onPress={this._clickTakePicture.bind(this)}>
+                        <Text style={styles.myButtonFont}>take photo</Text>
+                </TouchableOpacity>
             ) : (
             <TouchableHighlight
                 onPress={this._clickTakePicture.bind(this)}
